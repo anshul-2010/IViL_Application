@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color:rgb(255, 255, 255);
+  justify-content: space-around;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+/* 1st Animation Begins */
+.Square_Border_Color_Moving1{
+  margin-top:100px;
+  width: 10rem;
+  height:10rem;
+  --angle:0deg;
+  border:1rem solid;
+  display:flex;
+  border-image:linear-gradient(var(--angle),#12c2e9, #c471ed, #f64f59) 1;
+  animation: 5s rotate linear infinite;
+}
+.Square_Border_Color_Moving2{
+  margin-top:0.5rem;
+  margin-left:0.5rem;
+  width: 7rem;
+  height:7rem;
+  --angle:0deg;
+  border:1rem solid;
+  border-image:linear-gradient(var(--angle),#12c2e9, #c471ed, #f64f59) 1;
+  animation: 5s rotate linear infinite;
+}
+.Square_Border_Color_Moving3{
+  margin-top:0.5rem;
+  margin-left:0.5rem;
+  width: 4rem;
+  height:4rem;
+  --angle:0deg;
+  border:1rem solid;
+  border-image:linear-gradient(var(--angle),#12c2e9, #c471ed, #f64f59) 1;
+  animation: 5s rotate linear infinite;
+}
+
+@keyframes rotate{
+  to{
+    --angle:360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits:false;
+}
+/* 1st Animation Ends */
+
+/* 2nd Animation Begins */
+.spinner-box{
+  margin-top:100px;
+  width:10rem;
+  height:10rems;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  background-color: transparent;
+}
+
+.circle-border{
+  width:150px;
+  height:150px;
+  padding:3px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:50%;
+  background: rgb(0, 24, 20);
+  background: linear-gradient(0deg, rgba(63,249,220,0.1) 33%, rgb(23, 53, 94) 100%);
+  animation: spin .8s linear 0s infinite;
+}
+
+.circle-core {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+@keyframes spin{
+  from{
+    transform:rotate(0);
+  }
+  to{
+    transform:rotate(359deg);
+  }
+}
+/* 2nd Animation Ends */
+/* 3rd Animation Begins */
+.conf-border-1{
+  width:115px;
+  height:115px;
+  padding:3px;
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#3b1816; 
+  animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+}
+.conf-border-2{
+  width:115px;
+  height:115px;
+  padding:3px;
+  left:-115px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:rgb(63, 75, 249);
+  transform:rotate(45deg);
+  animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+}
+.conf-core {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+@keyframes configure-clockwise{
+  0%{
+    transform:rotate(0);
+  }
+  25%{
+    transform:rotate(90deg);
+}
+  50%{
+    transform:rotate(180deg);
+  }
+  75%{
+    transform:rotate(270deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+@keyframes configure-xclockwise{
+  0%{
+    transform:rotate(45deg);
+  }
+  25%{
+    transform:rotate(-45deg);
+}
+  50%{
+    transform:rotate(-135deg);
+  }
+  75%{
+    transform:rotate(-225deg);
+  }
+  100%{
+    transform:rotate(-315deg);
+  }
+  /* 3rd Animation Ends */
+}
+
+.break{
+  flex-basis:100%;
+  height:0;
+}
+
+.Theory{
+  justify-content:left;
+}
+
+ul{
+  color:darkblue;
+  font-size:40px;
+  font-family:'Courier New', Courier, monospace;
+  margin-left:10px;
+}
+li{
+  color:darkred;
+  font-size:30px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left:5px;
+}
+p{
+  color:black;
+  font-size:20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
