@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title> Login </title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>LOGIN</h3>
+            <p>Please enter your credentials to login.</p>
+          </div>
+        </div>
+        <div  id="form" class="login-form">
+          <input id="email" type="email" placeholder="Email"/>
+          <span id="validemail" style="color:red;font-size: 0.7rem;display: none;">Enter valid email</span>
+          <input id="password" type="password" placeholder="Password"><i class="fa fa-eye" id="togglePasswordpassword" onclick="visible('password')"></i>
+          <span id="validpassword" style="color:red;font-size: 0.7rem;display: none;">Enter valid password</span>
+          
+          <input id="confirmpassword" type="password" placeholder="Confirm Password"/><i class="fa fa-eye" id="togglePasswordconfirmpassword" onclick="visible('confirmpassword')"></i>
+          <span id="passwrdmatch" style="color:red;font-size: 0.7rem;display: none;" >Passwords do not match</span>
+          <button id="login"  >Login</button>
+        </div>
+      </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</body>
+</html>
